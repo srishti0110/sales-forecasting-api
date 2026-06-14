@@ -2,9 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "Sales_Forecasting_Live_project/index.py",
-      "use": "@vercel/python",
-      "config": {"runtime":"python3.12.4"}
+      "src": "index.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [

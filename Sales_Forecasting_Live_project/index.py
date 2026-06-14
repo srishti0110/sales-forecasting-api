@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 import joblib
 import numpy as np
+from mangum import Mangum
 
 app = FastAPI()
 
-handler = app
+handler = Mangum(app)
 
 preprocessor = joblib.load('preprocessor.pkl')
 model = joblib.load('sales_forecasting.pkl')
