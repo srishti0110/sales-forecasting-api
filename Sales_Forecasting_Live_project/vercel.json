@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Sales_Forecasting_Live_project/index.py",
+      "src": "index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Sales_Forecasting_Live_project/index.py"
+      "dest": "index.py"
     }
   ]
 }
