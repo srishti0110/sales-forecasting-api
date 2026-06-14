@@ -30,7 +30,10 @@ def predict(request: PredictRequest):
     if model is None:
         return {"error": "Model not loaded"}
     try:
-        input_df = pd.DataFrame([request.data])
+        # Replace these with your actual column names in correct order
+        columns = ["Product","Category", "Region", "Quantity", "Year", "Month", "Day"]
+        
+        input_df = pd.DataFrame([request.data], columns=columns)
         transformed_data = preprocessor.transform(input_df)
         prediction = model.predict(transformed_data)
         return {"prediction": int(prediction[0])}
